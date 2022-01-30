@@ -1,19 +1,15 @@
-# BK Precision 1696
+# BK Precision 9103 and 9104
 
-This is a Python library for communicating with the [BK Precision 1696][psup]
+This is a Python library for communicating with the [BK Precision 9103 and 9104][ref1]
 power supply via its serial interface. You can control the supply's parameters
 and take voltage/current readings.
 
-For example:
 
-    import psup
-    with psup.Supply() as sup:
-        sup.voltage(1.3)
-        volts, amps = sup.reading()
-        print '%f V, %f A' % (volts, amps)
+Please note since the primary purpose of the repository is to remotely (ON/OFF) control the power supply, only those commands have been incorporated for the 9103/9104. The remainder of the commands can be added on a need basis.
 
-For more details, see [my blog post][blog] about a setup using this library to
-measure the dynamic power of a smartphone.
 
-[psup]: http://www.bkprecision.com/products/model/1696/programmable-dc-power-supply-1-20vdc-0-999a.html
-[blog]: http://www.cs.washington.edu/homes/asampson/blog/powermeasurement.html
+[ref1]: https://www.bkprecision.com/products/power-supplies/9103-320w-multi-range-42v-20a-dc-power-supply.html
+
+Acknowledgement: 
+Portions of the code have been reused from the repository sampsyo/bkp1696 for a different power supply regulation unit.
+http://www.cs.washington.edu/homes/asampson/blog/powermeasurement.html
